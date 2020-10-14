@@ -14,6 +14,7 @@ with open("./pokemon.csv",'r') as csvfile:
         final_data = {}
         for row in reader:
             final_data[row["Name"].lower()] = {
+                "id": row["#"],
                 "Type": row["Type 1"],
                 "Generation": row["Generation"],
                 "Legendary": row["Legendary"],
